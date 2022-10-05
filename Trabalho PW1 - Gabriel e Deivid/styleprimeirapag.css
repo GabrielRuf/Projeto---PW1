@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #8c6b89;
+    margin: 8px;
+    
+}
+h1{
+    color: #185671;
+    display: block;
+    font-size: 3em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    text-align: center;
+    
+}
+
+.nav_tabs {
+    width: 90%;
+    height: 420px;
+    margin: 100px auto;
+    background-color:#ae8e96;
+    position:relative;
+    left: 0px;
+    
+}
+
+.nav_tabs ul{
+    list-style: none;
+    height: 100%;
+    
+}
+
+.nav_tabs ul li{
+    display: flex;
+    flex-direction: column;
+    max-height: 70px;
+    
+
+}
+
+.nav_tabs label {
+    color:white;
+    font-size: large;
+    width: 70px;
+    height: 20px;
+    padding: 25px;
+    display: block;
+    background-color:#185671;
+    cursor : pointer;
+    text-align: center;   
+}
+.rd_tabs:checked ~ label {
+    background-color:#ae8e96;
+}
+.rd_tabs{
+    display: none;
+}
+.content{
+    background-color:#ae8e96;
+    display: none;
+    height: 395px;
+    width: 80%;
+    top: 0px;
+    padding: 25px;
+    padding-bottom:0px;
+    position: absolute;
+    left:120px;
+    
+}
+.rd_tabs:checked ~ .content {
+    display: block;
+}
+
+.nav_tabs ul li .content form{
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    
+}
+table, th, td{
+    border: 2px solid black;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+th,td{
+    padding-right: 10px;
+    padding-left: 10px;
+    text-align: center;
+}
+table{
+    margin-top: 25px;
+}
+
+.content #listar_especifico{
+    padding-top:0px;
+}
+
+.nav_tabs ul li .content section{
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    padding-left: 350px;
+}
+
+form input{
+    border: 1px solid #ae8e96;
+    border-radius: 5px;
+    padding: 3px;
+}
+form input:focus{
+    background-color: #8c6b89;
+}
+input[type="submit"]{
+    background-color: #185671;
+    color:white;
+}
+
+.menu label{
+    margin-bottom: 15px;
+    display: block;
+}
+
+.menu nav{
+    background-color: aliceblue;
+    color: black;
+    font-size: x-large;
+    margin-bottom: 20px;
+}
+
+.menu a{
+    padding: 12px;
+    text-decoration: none;
+}
+
+.menu a:hover{
+    background-color: black;
+    color: aliceblue;
+}
+.menu{
+    text-align: center;
+}
+
+footer{
+    padding: 10px;
+    text-align: center;
+    background-color:#185671;
+    color:white;
+    font-size: large;
+}
+img{
+    height:100px;
+    width:100px;
+}
+.cabeçalho h1{
+    display:inline-block;
+}
+.cabeçalho img{
+    padding-left: 3em;
+}
+.cabeçalho{
+    
+    display: flex;
+    align-items: center;
+    margin-left:25em;
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+    <link rel="stylesheet" href="styleprimeirapag.css">
+    <Style>
+        body{
+            font-family: x-large;
+        }
+    </Style>
+    <script src="Clientes.js">
+    </script>
+
+</head>
+<body>
+    <div class="cabeçalho">
+    <h1>Imobiliária - Clientes</h1>
+    <img src="casa.png">
+    </div>
+    <section class="menu">
+    <nav>
+        <a href="Primeira página.html">Página de Clientes</a>
+        <a href="imoveis.html">Página de Imóveis</a>
+        <a href="alugueis.html">Página de Aluguéis</a>
+        <a href="relatorios.html">Página de Relatórios</a>
+        <a href="sair.html">Sair</a>
+    </nav>
+    </section class="envelope">
+    <nav class="nav_tabs" style="overflow-x:auto;">
+
+        <ul>
+            <li>
+                <input type="radio" name="tabs" class="rd_tabs" id="tab1">
+                <label for="tab1" class="aba">Incluir cliente</label>
+                <div class="content">
+                    <section>
+                        <form>        
+                            <span>CPF : </span>
+                            <input type="number" id="cpf"> 
+                            <span>Nome : </span>
+                            <input type="text" id="name">    
+                            <span>Data de nascimento : </span>
+                            <input type="date" id="nascimento"> 
+                            <span>Sexo : </span>
+                            <input type="text" id="sexo">       
+                            <span>Salário</span>
+                            <input type="text" id="salario">       
+                            <span>Email : </span>
+                            <input type="email" id="emails">      
+                            <span>Telefone : </span>
+                            <input type="text" id="telefone"><br>
+                            <button onclick="CadastraCliente()">Cadastra cliente</button>
+                        </form>
+                        
+                        <p id="result"></p>
+                    </section>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="tabs" class="rd_tabs" id="tab2">
+                <label for="tab2">Listar todos</label>
+                <div class="content" id="aba" >
+                    <button onclick="ListarTodos()">Listar Todos</button>
+                    <br>
+                    <section>                    
+                    <table id="tabela1"></table>
+                    </section>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="tabs" class="rd_tabs" id="tab3">
+                <label for="tab3">Listar Especifico</label>
+                <div class="content" id="listar_especifico">                    
+                    <span>CPF do cliente : <input type="text" id="cpflistar"></span>
+                    <button onclick="ListarEspecifico()">Listar Especifico</button>
+                    <table id="tabela2"></table>                
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="tabs" class="rd_tabs" id="tab4">
+                <label for="tab4">Alterar</label>
+                <div class="content" id="aba">
+                    <span>CPF do cliente : 
+                    <input type="text" id="cpfalterar">
+                    <button onclick="pesquisar()">Pesquisar</button>
+                    </span>
+                    <table id="tabela3"></table>
+                    <br>
+                    <span>O que deseja alterar : 
+                        <br><span><input id="2" type="checkbox" class="checkoption" onclick="checkedOnClick(this);"> Nome</span>
+                        <br><span><input id="3" type="checkbox" class="checkoption" onclick="checkedOnClick(this);"> Data nascimento</span>
+                        <br><span><input id="4" type="checkbox" class="checkoption" onclick="checkedOnClick(this);"> Sexo</span>
+                        <br><span><input id="5" type="checkbox" class="checkoption" onclick="checkedOnClick(this);"> Salario</span>
+                        <br><span><input id="6" type="checkbox" class="checkoption" onclick="checkedOnClick(this);"> Email(s)</span>
+                        <br><span><input id="7" type="checkbox" class="checkoption" onclick="checkedOnClick(this);"> Telefone(s)</span><br>
+
+                        <br><span>Novo dado : 
+                        </span>
+                    </span>
+                    <p id="pdadonovo"><input type="text" id="novodado"></p>
+                    <br>
+                    <button onclick="ConfirmarAlterar()">Confirmar</button>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="tabs" class="rd_tabs" id="tab5">
+                <label for="tab5">Excluir</label>
+                <div class="content" id="aba">
+                    <span>CPF do cliente : 
+                        <input type="text" id="cpfexcluir">
+                        <button onclick="pesquisarexc()">Pesquisar</button>
+                    </span>
+                        <table id="tabela5">
+                        </table>
+                        <br>
+                        <button onclick="confirmarexc()">Excluir</button>
+                </div>
+            </li>
+        </ul>
+
+    </nav>
+    </section>
+    <footer>Deivid Filho<br>
+        Gabriel Rufino
+    
+    </footer>
+</body>
+</html>

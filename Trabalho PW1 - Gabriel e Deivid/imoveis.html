@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+    <link rel="stylesheet" href="styleprimeirapag.css">
+    <Style>
+        body{
+            font-family: x-large;
+        }
+    </Style>
+</head>
+<body>
+    <div class="cabeçalho">
+        <h1>Imobiliária - Imóveis </h1>
+        <img src="casa.png">
+    </div>
+    <section class="menu">
+    <nav>
+        <a href="Primeira página.html">Página de Clientes</a>
+        <a href="imoveis.html">Página de Imóveis</a>
+        <a href="alugueis.html">Página de Aluguéis</a>
+        <a href="relatorios.html">Página de Relatórios</a>
+        <a href="sair.html">Sair</a>
+    </nav>
+    </section class="envelope">
+    <nav class="nav_tabs" style="overflow-x:auto;">
+
+        <ul>
+            <li>
+                <input type="radio" name="tabs" class="rd_tabs" id="tab1">
+                <label for="tab1" class="aba">Incluir imóvel</label>
+                <div class="content">
+                    <section>
+                        <form>
+                            <span> Código do imóvel:
+                                <input type="text" name="code">
+                            </span>
+                            
+                            <span> Descrição do imóvel:<br>
+                                <textarea name="description" rows="5" cols="40">
+                                </textarea>
+                            </span>
+                            
+                            <span> Rua:
+                                <input type="text" name="rua">
+                            </span>
+                            
+                            <span> Número:
+                                <input type="number" name="num"> 
+                            </span>
+                            
+                            <span> Bairro:
+                                <input type="text" name="bairro">
+                            </span>
+                            
+                            <span> Cidade:
+                                <input type="text" name="city">
+                            </span>
+                            
+                            <span> Estado:
+                                <select id="UF">
+                                    <option value="ac">AC</option>
+                                    <option value="al">AL</option>
+                                    <option value="ap">AP</option>
+                                    <option value="am">AM</option>
+                                    <option value="ba">BA</option>
+                                    <option value="ce">CE</option>
+                                    <option value="df">DF</option>
+                                    <option value="es">ES</option>
+                                    <option value="go">GO</option>
+                                    <option value="ma">MA</option>
+                                    <option value="mt">MT</option>
+                                    <option value="ms">MS</option>
+                                    <option value="mg">MG</option>
+                                    <option value="pa">PA</option>
+                                    <option value="pb">PB</option>
+                                    <option value="pr">PR</option>
+                                    <option value="pe">PE</option>
+                                    <option value="pi">PI</option>
+                                    <option value="rj">RJ</option>
+                                    <option value="rn">RN</option>
+                                    <option value="rs">RS</option>
+                                    <option value="ro">RO</option>
+                                    <option value="rr">RR</option>
+                                    <option value="sc">SC</option>
+                                    <option value="sp">SP</option>
+                                    <option value="pi">PI</option>
+                                    <option value="se">SE</option>
+                                    <option value="to">TO</option>
+                                    </select>
+                                </span>
+                            
+                            <span> País:
+                                <input type="text" name="country">
+                            </span>
+                            
+                            <span> CEP:
+                                <input type="text" id="cep">
+                            </span>
+                            
+                            <span> Tipo de imóvel:
+                                <input type="text" id="type">
+                            </span>
+                            
+                            <span> Número de garagens:
+                                <input type="number" id="garagens">
+                            </span>
+                            
+                            <span> Número de suítes:
+                                <input type="number" id="suites"> 
+                            </span>
+                            
+                            <span> Número de quartos:
+                                <input type="number" id="bedroom">
+                            </span>
+                            
+                            <span> Itens de segurança:
+                                <input type="text" id="seguranca">
+                            </span>
+                            
+                            <span> Valor do aluguel:
+                                <input type="text" id="price">
+                            </span>
+                            
+                            <span> Valor do Condomínio:
+                                <input type="number" id="condominio">
+                            </span>
+                            <br>
+                            <input type="submit" id="nome" value="Incluir imóvel">
+                        </form>
+                    </section>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="tabs" class="rd_tabs" id="tab2">
+                <label for="tab2">Listar todos</label>
+                <div class="content" id="aba" >
+                    <input type="submit" value="Listar todos" class="listartodos">
+                    <br>
+                    <section>                    
+                        <table class="tabela1">
+                            <tr>
+                                <th>Código</th>
+                                <th>Descrição</th>
+                                <th>CEP</th>
+                                <th>Nº</th>
+                                <th>Tipo</th>
+                                <th>Garagens</th>
+                                <th>Suítes</th>
+                                <th>Quartos</th>
+                                <th>Itens de Segurança</th>
+                                <th>Valor Alugel</th>
+                                <th>Valor condomínio</th>
+                            </tr>
+                            <tr>
+                                <td>3a5j</td>
+                                <td>Imóvel com 430m*2</td>
+                                <td>15679-904</td>
+                                <td>157</td>
+                                <td>Casa</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>Cerca Elétrica com alarme, Extintor de Incêndio</td>
+                                <td>R$1800,00</td>
+                                <td>R$0</td>
+                            </tr>
+                            <tr>
+                                <td>5t2e</td>
+                                <td>Imóvel com 250m*2</td>
+                                <td>15054-307</td>
+                                <td>408B</td>
+                                <td>Apto</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>2</td>
+                                <td>Alarme de incêndio, extintores</td>
+                                <td>R$1000,00</td>
+                                <td>R$30,00</td>
+                            </tr>
+                            <tr>
+                                <td>7p3r</td>
+                                <td>Imóvel com 320m*2</td>
+                                <td>15221-506</td>
+                                <td>905</td>
+                                <td>Casa</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>2</td>
+                                <td>Cerca elétrica com alarme</td>
+                                <td>R$1250,00</td>
+                                <td>R$0</td>
+                            </tr>
+                            <tr>
+                                <td>9z8q</td>
+                                <td>Imóvel com 350m*2</td>
+                                <td>15988-074</td>
+                                <td>85A</td>
+                                <td>Apto</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>3</td>
+                                <td>Alarme de incêndio, extintores</td>
+                                <td>R$1400,00</td>
+                                <td>R$50,00</td>
+                            </tr>    
+                        </table>
+                    </section>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="tabs" class="rd_tabs" id="tab3">
+                <label for="tab3">Listar Especifico</label>
+                <div class="content" id="listar_especifico">                    
+                    <span>Código do imóvel : <input type="text" id="cpflistar"></span>
+                    <input type="submit" value="Listar Especifico">
+                    <table>
+                        <tr>
+                            <th>Código</th>
+                            <th>Descrição</th>
+                            <th>CEP</th>
+                            <th>Nº</th>
+                            <th>Tipo</th>
+                            <th>Garagens</th>
+                            <th>Suítes</th>
+                            <th>Quartos</th>
+                            <th>Itens de Segurança</th>
+                            <th>Valor Alugel</th>
+                            <th>Valor condomínio</th>
+                        </tr>
+                        <tr>
+                            <td>3a5j</td>
+                            <td>Imóvel com 430m*2</td>
+                            <td>15679-904</td>
+                            <td>157</td>
+                            <td>Casa</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>Cerca Elétrica com alarme, Extintor de Incêndio</td>
+                            <td>R$1800,00</td>
+                            <td>R$0</td>
+                        </tr>
+                    </table>                
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="tabs" class="rd_tabs" id="tab4">
+                <label for="tab4">Alterar</label>
+                <div class="content" id="aba">
+                    <span>Código do imóvel : 
+                    <input type="text">
+                    <input type="submit" value="Pesquisar">
+                    </span>
+                    <table>
+                        <tr>
+                            <th>Código</th>
+                            <th>Descrição</th>
+                            <th>CEP</th>
+                            <th>Nº</th>
+                            <th>Tipo</th>
+                            <th>Garagens</th>
+                            <th>Suítes</th>
+                            <th>Quartos</th>
+                            <th>Itens de Segurança</th>
+                            <th>Valor Alugel</th>
+                            <th>Valor condomínio</th>
+                        </tr>
+                        <tr>
+                            <td>3a5j</td>
+                            <td>Imóvel com 430m*2</td>
+                            <td>15679-904</td>
+                            <td>157</td>
+                            <td>Casa</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>Cerca Elétrica com alarme, Extintor de Incêndio</td>
+                            <td>R$1800,00</td>
+                            <td>R$0</td>
+                        </tr>
+                    </table> 
+                    <br>
+                    <span>O que deseja alterar : 
+                        <input type="text">
+                        <span>Novo dado : 
+                        <input type="text">
+                        </span>
+                        <input type="submit" value="Alterar">
+                    </span>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="tabs" class="rd_tabs" id="tab5">
+                <label for="tab5">Excluir</label>
+                <div class="content" id="aba">
+                    <span>Código do imóvel : 
+                        <input type="text">
+                        <input type="submit" value="Pesquisar">
+                        </span>
+                        <table>
+                            <tr>
+                                <th>Código</th>
+                                <th>Descrição</th>
+                                <th>CEP</th>
+                                <th>Nº</th>
+                                <th>Tipo</th>
+                                <th>Garagens</th>
+                                <th>Suítes</th>
+                                <th>Quartos</th>
+                                <th>Itens de Segurança</th>
+                                <th>Valor Alugel</th>
+                                <th>Valor condomínio</th>
+                            </tr>
+                            <tr>
+                                <td>3a5j</td>
+                                <td>Imóvel com 430m*2</td>
+                                <td>15679-904</td>
+                                <td>157</td>
+                                <td>Casa</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>Cerca Elétrica com alarme, Extintor de Incêndio</td>
+                                <td>R$1800,00</td>
+                                <td>R$0</td>
+                            </tr>
+                        </table>
+                        <br>
+                        <span>Tem certeza que deseja excluir o imóvel ?
+                            <input type="submit" value="excluir">
+                            <input type="submit" value="cancelar">
+                        </span>
+                </div>
+            </li>
+        </ul>
+
+    </nav>
+    </section>
+    <footer>Luan Marqueti 3029531<br>
+        Gabriel Rufino 3029841
+    </footer>
+</body>
+</html>
