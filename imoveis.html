@@ -11,6 +11,7 @@
             font-family: x-large;
         }
     </Style>
+    <script> src="/Trabalho em dupla-20221001T023243Z-001/Trabalho em dupla/Imoveis.js" </script>
 </head>
 <body>
     <div class="cabeçalho">
@@ -31,33 +32,33 @@
         <ul>
             <li>
                 <input type="radio" name="tabs" class="rd_tabs" id="tab1">
-                <label for="tab1" class="aba">Incluir imóvel</label>
+                <label for="tab1" class="aba">Incluir imóvel</label> 
                 <div class="content">
                     <section>
                         <form>
                             <span> Código do imóvel:
-                                <input type="text" name="code">
+                                <input type="text" name="code" id="code">
                             </span>
                             
                             <span> Descrição do imóvel:<br>
-                                <textarea name="description" rows="5" cols="40">
+                                <textarea name="description" id="description" rows="5" cols="40">
                                 </textarea>
                             </span>
                             
                             <span> Rua:
-                                <input type="text" name="rua">
+                                <input type="text" name="rua" id="rua">
                             </span>
                             
                             <span> Número:
-                                <input type="number" name="num"> 
+                                <input type="number" name="num" id="num"> 
                             </span>
                             
                             <span> Bairro:
-                                <input type="text" name="bairro">
+                                <input type="text" name="bairro" id="bairro">
                             </span>
                             
                             <span> Cidade:
-                                <input type="text" name="city">
+                                <input type="text" name="city" id="city">
                             </span>
                             
                             <span> Estado:
@@ -94,7 +95,7 @@
                                 </span>
                             
                             <span> País:
-                                <input type="text" name="country">
+                                <input type="text" name="country" id="country">
                             </span>
                             
                             <span> CEP:
@@ -114,7 +115,7 @@
                             </span>
                             
                             <span> Número de quartos:
-                                <input type="number" id="bedroom">
+                                <input type="number" id="quartos">
                             </span>
                             
                             <span> Itens de segurança:
@@ -129,12 +130,88 @@
                                 <input type="number" id="condominio">
                             </span>
                             <br>
-                            <input type="submit" id="nome" value="Incluir imóvel">
+                            <!-- <input type="submit" id="nome" value="Incluir imóvel"> -->
+                            <button onclick="CadastraImoveis()">Cadastra imóvel</button>
                         </form>
+
+                        <p class="result"></p>
                     </section>
                 </div>
             </li>
             <li>
+                <input type="radio" name="tabs" class="rd_tabs" id="tab2">
+                <label for="tab2">Listar todos</label>
+                <div class="content" id="aba" >
+                    <button onclick="ListarTodos()">Listar Todos</button>
+                    <br>
+                    <section>                    
+                    <table id="tabela1"></table>
+                    </section>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="tabs" class="rd_tabs" id="tab3">
+                <label for="tab3">Listar Especifico</label>
+                <div class="content" id="listar_especifico">                    
+                    <span>Código do Imóvel : <input type="text" id="codigolistar"></span>
+                    <button onclick="ListarEspecifico()">Listar Especifico</button>
+                    <table id="tabela2"></table>                
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="tabs" class="rd_tabs" id="tab4">
+                <label for="tab4">Alterar</label>
+                <div class="content" id="aba">
+                    <span>Código do imóvel : 
+                    <input type="text" id="codigoalterar">
+                    <button onclick="pesquisarexc()">Pesquisar</button>
+                    </span>
+                    <table id="tabela3"></table>
+                    <br>
+                    <span>O que deseja alterar : 
+                        <br><span><input id="2" type="checkbox" class="checkoption" onclick="checkedOnClick(this);"> Descrição</span>
+                        <br><span><input id="3" type="checkbox" class="checkoption" onclick="checkedOnClick(this);"> Rua</span>
+                        <br><span><input id="4" type="checkbox" class="checkoption" onclick="checkedOnClick(this);"> Número</span>
+                        <br><span><input id="5" type="checkbox" class="checkoption" onclick="checkedOnClick(this);"> Bairro</span>
+                        <br><span><input id="6" type="checkbox" class="checkoption" onclick="checkedOnClick(this);"> Cidade</span>
+                        <br><span><input id="7" type="checkbox" class="checkoption" onclick="checkedOnClick(this);"> Estado</span><br>
+                        <br><span><input id="8" type="checkbox" class="checkoption" onclick="checkedOnClick(this);"> Pais</span><br>
+                        <br><span><input id="9" type="checkbox" class="checkoption" onclick="checkedOnClick(this);"> CEP</span><br>
+                        <br><span><input id="10" type="checkbox" class="checkoption" onclick="checkedOnClick(this);"> Tipo de imóvel</span><br>
+                        <br><span><input id="11" type="checkbox" class="checkoption" onclick="checkedOnClick(this);"> Número de garagens</span><br>
+                        <br><span><input id="12" type="checkbox" class="checkoption" onclick="checkedOnClick(this);"> Número de Suítes</span><br>
+                        <br><span><input id="13" type="checkbox" class="checkoption" onclick="checkedOnClick(this);"> Número de quartos</span><br>
+                        <br><span><input id="14" type="checkbox" class="checkoption" onclick="checkedOnClick(this);"> Itens de segurança</span><br>
+                        <br><span><input id="15" type="checkbox" class="checkoption" onclick="checkedOnClick(this);"> Valor do aluguel</span><br>
+                        <br><span><input id="16" type="checkbox" class="checkoption" onclick="checkedOnClick(this);"> Valor do condominío</span><br>
+    
+                        <br><span>Novo dado : 
+                        </span>
+                    </span>
+                    <p id="pdadonovo"><input type="text" id="novodado"></p>
+                    <br>
+                    <button onclick="ConfirmarAlterar()">Confirmar</button>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="tabs" class="rd_tabs" id="tab5">
+                <label for="tab5">Excluir</label>
+                <div class="content" id="aba">
+                    <span>Código do Imóvel : 
+                        <input type="text" id="codigoexcluir">
+                        <button onclick="pesquisarexc()">Pesquisar</button>
+                    </span>
+                        <table id="tabela5">
+                        </table>
+                        <br>
+                        <button onclick="confirmarexc()">Excluir</button>
+                </div>
+            </li>
+        </ul>
+
+
+
+            <!-- <li>
                 <input type="radio" name="tabs" class="rd_tabs" id="tab2">
                 <label for="tab2">Listar todos</label>
                 <div class="content" id="aba" >
@@ -336,12 +413,12 @@
                         </span>
                 </div>
             </li>
-        </ul>
+        </ul> -->
 
     </nav>
     </section>
-    <footer>Luan Marqueti 3029531<br>
-        Gabriel Rufino 3029841
+    <footer>Deividi Filho<br>
+        Gabriel Rufino
     </footer>
 </body>
 </html>
