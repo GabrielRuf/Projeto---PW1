@@ -1,31 +1,38 @@
-var imoveis = []
+let imoveis = []
 let i = 0
 
-function CadastraImoveis() {
+function CadastraImoveis() 
+{
+  event.preventDefault()
+
   let imovel = {
-    codigo: document.getElementById('code').value,
-    description: document.getElementById('description').value,
-    rua: document.getElementById('rua').value,
-    num: document.getElementById('num').value,
-    bairro: document.getElementById('bairro').value,
-    city: document.getElementById('city').value,
-    estado: document.getElementById('UF').value,
-    pais: document.getElementById('pais').value,
-    cep: document.getElementById('cep').value,
-    tipo: document.getElementById('tipo').value,
-    garagens: document.getElementById('garagens').value,
-    suites: document.getElementById('suites').value,
-    quartos: document.getElementById('quartos').value,
-    seguranca: document.getElementById('seguranca').value,
-    preco: document.getElementById('preco').value,
-    condominio: document.getElementById('condominio').value
-  }
-  Cadastro = BuscarCadastro(imoveis, imovel.codigo)
-  if (Cadastro == -1) {
-    imoveis.push(imovel)
-    alert('Imóvel cadastrada !')
-  } else {
-    alert('Imóvel já cadastrado !')
+    codigo : document.getElementById("code").value,
+    description: document.getElementById("description").value,
+    rua: document.getElementById("rua").value,
+    num: document.getElementById("num").value,
+    bairro: document.getElementById("bairro").value,
+    city: document.getElementById("city").value,
+    estado: document.getElementById("UF").value,
+    pais: document.getElementById("pais").value,
+    cep: document.getElementById("cep").value,
+    tipo: document.getElementById("tipo").value,
+    garagens: document.getElementById("garagens").value,
+    suites: document.getElementById("suite").value,
+    quartos: document.getElementById("quartos").value,
+    seguranca: document.getElementById("seguranca").value,
+    preco: document.getElementById("preco").value,
+    condominio: document.getElementById("condominio").value
+  };
+  
+  Cadastro = BuscarCadastro(imoveis,imovel.codigo);
+  
+  if (Cadastro == -1) 
+  {
+    imoveis.push(imovel);
+    alert('Imóvel cadastrada !');
+  } 
+  else {
+    alert('Imóvel já cadastrado !');
   }
 }
 function ListarTodos() {
@@ -93,11 +100,11 @@ function ListarTodos() {
 }
 
 function ListarEspecifico() {
-  let codigoEspecifico = document.getElementById('codigolistar').value
+  let codigoEspecifico = document.getElementById("codigolistar").value;
   let linhaCadastro =
     '<table><tr><th>Código</td><th>Descrição</td>Rua<th>Número</td><th>Bairro</td><th>Cidade</td><th>Estado</td><th>País</td><th>CEP</td><th>Garagens</td><th>Suites</td></th>Suítes</td><th>Quartos</td><th>segurança</td><th>Preço</td><th>condominio</td></tr></td></tr>'
-  if (Cadastro.length > 0) {
-    cadastro = BuscarCadastro(imoveis, codigoEspecifico)
+  if (imoveis.length > 0) {
+    Cadastro = BuscarCadastro(imoveis, codigoEspecifico)
     if (Cadastro != -1) {
       linhaCadastro +=
         '<tr><td>' +
@@ -167,11 +174,11 @@ let ImoveisAlterando = -1
 function BuscarCadastro(VetorImovel, codigo) {
   let i = 0
   for (i = 0; i < VetorImovel.length; i++) {
-    if ((VetorImovel[i].codigo = codigo)) {
-      return i
+    if (VetorImovel[i].codigo == codigo) {
+      return i;
     }
   }
-  return -1
+  return -1;
 }
 
 function checkedOnClick(el) {

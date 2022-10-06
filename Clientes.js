@@ -17,7 +17,7 @@ function CadastraCliente() //Função responsável por cadastrar o cliente
     if (Cadastro == -1)
     {
         clientes.push(cliente); //Se não estiver cadastrado coloca no vetor clientes global
-        alert("Cliente cadastrado !")
+        alert("Cliente cadastrado !");
     }
     else
     {
