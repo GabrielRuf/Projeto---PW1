@@ -172,7 +172,7 @@ let ImoveisAlterando = -1;
 function pesquisar() {
   let codigoEspecifico = document.getElementById('codigoalterar').value
   let linhaCadastro =
-  '<table><tr><th>Código</td><td>Descrição</td><td>Rua</td><td>Número</td><td>Bairro</td><td>Cidade</td><td>Estado</td><td>País</td><td>CEP</td><td>Garagens</td><td>Suites</td><td>Suítes</td><td>Quartos</td><td>segurança</td><td>Preço</td><td>condominio</td></th></tr>'
+  '<table><tr><th>Código</td><td>Descrição</td><td>Rua</td><td>Número</td><td>Bairro</td><td>Cidade</td><td>Estado</td><td>País</td><td>CEP</td><td>Tipo</td><td>Garagens</td><td>Suítes</td><td>Quartos</td><td>segurança</td><td>Aluguel</td><td>condominio</td></th></tr>'
 
   if (imoveis.length > 0) {
     Cadastro = BuscarCadastro(imoveis, codigoEspecifico)
@@ -188,6 +188,9 @@ function pesquisar() {
         imoveis[Cadastro].rua +
         '</td>' +
         '<td>' +
+        imoveis[Cadastro].num +
+        '</td>' +
+        '<td>' +
         imoveis[Cadastro].bairro +
         '</td>' +
         '<td>' +
@@ -201,6 +204,9 @@ function pesquisar() {
         '</td>' +
         '<td>' +
         imoveis[Cadastro].cep +
+        '</td>' +
+        '<td>' +
+        imoveis[Cadastro].tipo +
         '</td>' +
         '<td>' +
         imoveis[Cadastro].garagens +
@@ -219,7 +225,7 @@ function pesquisar() {
         '</td>' +
         '<td>' +
         imoveis[Cadastro].condominio +
-        '</td></tr></td></tr>'
+        '</td></tr>';
       linhaCadastro += '</table>'
       document.getElementById('tabela3').innerHTML = linhaCadastro
       ImoveisAlterando = Cadastro;
