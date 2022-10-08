@@ -40,8 +40,7 @@
                             <input type="number" id="code">
                             
                             <span> Descrição do imóvel:<br></span>
-                            <textarea id="description" rows="5" cols="40">
-                            </textarea>
+                            <input type="text"  id="description">
                             
                             <span> Rua:
                             </span>
@@ -60,37 +59,7 @@
                             <input type="text" id="city">
                             
                             <span> Estado: </span>
-                                <select id="UF">
-                                    <option value="ac">AC</option>
-                                    <option value="al">AL</option>
-                                    <option value="ap">AP</option>
-                                    <option value="am">AM</option>
-                                    <option value="ba">BA</option>
-                                    <option value="ce">CE</option>
-                                    <option value="df">DF</option>
-                                    <option value="es">ES</option>
-                                    <option value="go">GO</option>
-                                    <option value="ma">MA</option>
-                                    <option value="mt">MT</option>
-                                    <option value="ms">MS</option>
-                                    <option value="mg">MG</option>
-                                    <option value="pa">PA</option>
-                                    <option value="pb">PB</option>
-                                    <option value="pr">PR</option>
-                                    <option value="pe">PE</option>
-                                    <option value="pi">PI</option>
-                                    <option value="rj">RJ</option>
-                                    <option value="rn">RN</option>
-                                    <option value="rs">RS</option>
-                                    <option value="ro">RO</option>
-                                    <option value="rr">RR</option>
-                                    <option value="sc">SC</option>
-                                    <option value="sp">SP</option>
-                                    <option value="pi">PI</option>
-                                    <option value="se">SE</option>
-                                    <option value="to">TO</option>
-                                    </select>
-                                
+                            <input type="text"  id="UF">
                             
                             <span> País:</span>
                             <input type="text"  id="pais">
@@ -162,7 +131,7 @@
                 <div class="content" id="aba">
                     <span>Código do imóvel : 
                     <input type="text" id="codigoalterar">
-                    <button onclick="pesquisarexc()">Pesquisar</button>
+                    <button onclick="pesquisar()">Pesquisar</button>
                     </span>
                     <table id="tabela3"></table>
                     <br>
@@ -195,8 +164,8 @@
                 <input type="radio" name="tabs" class="rd_tabs" id="tab5">
                 <label for="tab5">Excluir</label>
                 <div class="content" id="aba">
-                    <span>Código do Imóvel : 
-                        <input type="text" id="codigoexcluir">
+                    <span>Código do Imóvel: 
+                        <input type="number" id="codigoexcluir">
                         <button onclick="pesquisarexc()">Pesquisar</button>
                     </span>
                         <table id="tabela5">
