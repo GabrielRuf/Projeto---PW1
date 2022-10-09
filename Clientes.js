@@ -233,6 +233,7 @@ function confirmarexc() // Usei o filter pra excluir, creio que é a função ma
 {
     let clientesnovo = clientes.filter(excluir);//Cria nova array que segue as condições da função excluir
     clientes = clientesnovo;
+    alert("Cliente excluido com sucesso!");
 }
 
 function excluir(elemento)
