@@ -1,5 +1,10 @@
 clientes = []; //Banco de dados dos clientes,vetor global
 let i = 0;
+function AtualizaVetor()
+{
+    let vetoremstring = localStorage.getItem("Vetor clientes");
+    clientes = JSON.parse(vetoremstring);
+}
 function CadastraCliente() //Função responsável por cadastrar o cliente
 {
     event.preventDefault()
@@ -18,13 +23,13 @@ function CadastraCliente() //Função responsável por cadastrar o cliente
     {
         clientes.push(cliente); //Se não estiver cadastrado coloca no vetor clientes global
         alert("Cliente cadastrado !");
+        let stringClientes = JSON.stringify(clientes);
+        localStorage.setItem("Vetor clientes",stringClientes);
     }
     else
     {
         alert("Cliente já está cadastrado !"); //Se estiver ele da um aviso e não inclui
     }
-    let stringClientes = JSON.stringify(clientes);
-    localStorage.setItem("Vetor clientes",stringClientes);
 }
 function ListarTodos() //Lista todos os clientes cadastrados no vetor global clientes
 {   // Essa string LinhaCadastro representa a tabela com o cadastro do cliente, que é formada
