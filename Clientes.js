@@ -240,6 +240,8 @@ function confirmarexc() // Usei o filter pra excluir, creio que é a função ma
 {
     let clientesnovo = clientes.filter(excluir);//Cria nova array que segue as condições da função excluir
     clientes = clientesnovo;
+    let stringClientes = JSON.stringify(clientes);
+    localStorage.setItem("Vetor clientes",stringClientes);
     alert("Cliente excluido com sucesso!");
 }
 
