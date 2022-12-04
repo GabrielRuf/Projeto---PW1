@@ -23,6 +23,8 @@ function CadastraCliente() //Função responsável por cadastrar o cliente
     {
         alert("Cliente já está cadastrado !"); //Se estiver ele da um aviso e não inclui
     }
+    let stringClientes = JSON.stringify(clientes);
+    localStorage.setItem("Vetor clientes",stringClientes);
 }
 function ListarTodos() //Lista todos os clientes cadastrados no vetor global clientes
 {   // Essa string LinhaCadastro representa a tabela com o cadastro do cliente, que é formada
