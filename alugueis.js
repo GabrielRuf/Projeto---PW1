@@ -6,13 +6,13 @@ function CadastraImoveis() {
   event.preventDefault()
 
   let imovel = {
-    cpf: document.getElementById('cpf').value,
-    codigo: document.getElementById('code').value,
-    dataentrada: document.getElementById('dataentrada').value,
-    cpffiador: document.getElementById('cpffiador').value,
-    nomefiador: document.getElementById('nomefiador').value,
-    datasaida: document.getElementById('datasaida').value,
-    valormensal: document.getElementById('valormensal').value,
+    cpf: document.getElementById("cpf").value,
+    codigo: document.getElementById("code").value,
+    dataentrada: document.getElementById("dataentrada").value,
+    cpffiador: document.getElementById("cpffiador").value,
+    nomefiador: document.getElementById("nomefiador").value,
+    datasaida: document.getElementById("datasaida").value,
+    valormensal: document.getElementById("valormensal").value,
   }
 
   Cadastro = BuscarCadastro(imoveis, imovel.codigo)
