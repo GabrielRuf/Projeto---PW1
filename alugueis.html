@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulários</title>
+    <title>Submenu</title>
     <link rel="stylesheet" href="styleprimeirapag.css">
     <Style>
         body{
@@ -12,6 +12,7 @@
         }
     </Style>
     <script src="/submenu1.js"></script>
+
 </head>
 <body>
     <div class="cabeçalho">
@@ -25,214 +26,147 @@
         <a href="alugueis.html">Página de Aluguéis</a>
         <a href="relatorios.html">Página de Relatórios</a>
         <a href="sair.html">Sair</a>
-    
     </nav>
-    </section class="envelope">
-    <nav class="nav_tabs" style="overflow-x:auto;">
 
-        <ul>
-            <li>
-                <input type="radio" name="tabs" class="rd_tabs" id="tab1">
-                <label for="tab1" class="aba">Incluir aluguel</label>
-                <div class="content">
-                    <section>
-                        <form>
-                            <span> CPF do cliente:
-                                <input type="text" name="cpf">
-                            </span>
-                            
-                            <span> Código do imóvel:
-                                <input type="text" name="code">
-                            </span>     
-                            
-                            <span> Data de entrada:
-                                <input type="date" name="dataentrada">
-                            </span>
-                            
-                            <span> CPF do fiador:
-                                <input type="text" name="cpffiador"> 
-                            </span>
-                            
-                            <span> Nome do fiador:
-                                <input type="text" name="nomefiador">
-                            </span>
-                            
-                            <span> Data de saída:
-                                <input type="date" name="datasaida">
-                            </span>
-                            
-                            <span> Valor mensal:
-                                <input type="number" name="valormensal">
-                            </span>
-                            <br>
-                            <input type="submit" id="nome" value="Incluir aluguel">
+  </section class="envelope">
+  <nav class="nav_tabs" style="overflow-x:auto;">
 
-                        </form>                    
-                    </section>
-                </div>
-            </li>
-            <li>
-                <input type="radio" name="tabs" class="rd_tabs" id="tab2">
-                <label for="tab2">Listar todos</label>
-                <div class="content" id="aba" >
-                    <input type="submit" value="Listar todos" class="listartodos">
-                    <br>
-                    <section>                    
-                        <table class="tabela1">
-                            <tr>
-                                <th>CPF do cliente</th>
-                                <th>Código do imóvel</th>
-                                <th>Data de entrada</th>
-                                <th>CPF do fiador</th>
-                                <th>Nome do fiador</th>
-                                <th>Data de saída</th>
-                                <th>Valor mensal</th>
-                            </tr>
-                            <tr>
-                                <td>431.294.177-60</td>
-                                <td>3a5j</td>
-                                <td>06/01/21</td>
-                                <td>386.824.721-40</td>
-                                <td>Evandro Garcia</td>
-                                <td>19/01/22</td>
-                                <td>R$1800,00</td>
-                            </tr>
-                            <tr>
-                                <td>341.492.717-06</td>
-                                <td>5t2e</td>
-                                <td>17/01/21</td>
-                                <td>357.804.521-40</td>
-                                <td>José Ramos</td>
-                                <td>03/02/22</td>
-                                <td>R$1000,00</td>            
-                            </tr>
-                            <tr>
-                                <td>134.942.771-50</td>
-                                <td>7p3r</td>
-                                <td>03/02/21</td>
-                                <td>321.433.654-15</td>
-                                <td>Maria Lacerda</td>
-                                <td>20/11/21</td>
-                                <td>R$1250,00</td>
-                            </tr>
-                            <tr>
-                                <td>422.119.853-40</td>
-                                <td>9z8q</td>
-                                <td>09/02/21</td>
-                                <td>359.424.651-18</td>
-                                <td>Renan da Silva</td>
-                                <td>15/07/21</td>
-                                <td>R$1400,00</td>
-                            </tr>    
-                        </table>
-                    </section>
-                </div>
-            </li>
-            <li>
-                <input type="radio" name="tabs" class="rd_tabs" id="tab3">
-                <label for="tab3">Listar Especifico</label>
-                <div class="content" id="listar_especifico">                    
-                    <span>CPF do cliente : <input type="text" id="cpflistar"></span>
-                    <input type="submit" value="Listar Especifico">
-                    <table class="tabela1">
-                        <tr>
-                            <th>CPF do cliente</th>
-                            <th>Código do imóvel</th>
-                            <th>Data de entrada</th>
-                            <th>CPF do fiador</th>
-                            <th>Nome do fiador</th>
-                            <th>Data de saída</th>
-                            <th>Valor mensal</th>
-                        </tr>
-                        <tr>
-                            <td>431.294.177-60</td>
-                            <td>3a5j</td>
-                            <td>06/01/21</td>
-                            <td>386.824.721-40</td>
-                            <td>Evandro Garcia</td>
-                            <td>19/01/22</td>
-                            <td>R$1800,00</td>
-                        </tr>
-                    </table>                
-                </div>
-            </li>
-            <li>
-                <input type="radio" name="tabs" class="rd_tabs" id="tab4">
-                <label for="tab4">Alterar</label>
-                <div class="content" id="aba">
-                    <span>Código do imóvel que deseja alterar : 
+      <ul>
+          <li>
+              <input type="radio" name="tabs" class="rd_tabs" id="tab1">
+              <label for="tab1" class="aba">Incluir aluguel</label>
+              <div class="content">
+                  <section>
+                      <form>
+                          <span> CPF do cliente:
+                              <input type="number" name="cpf">
+                          </span>
+                          
+                          <span> Código do imóvel:
+                              <input type="number" name="code">
+                          </span>     
+                          
+                          <span> Data de entrada:
+                              <input type="date" name="dataentrada">
+                          </span>
+                          
+                          <span> CPF do fiador:
+                              <input type="number" name="cpffiador"> 
+                          </span>
+                          
+                          <span> Nome do fiador:
+                              <input type="text" name="nomefiador">
+                          </span>
+                          
+                          <span> Data de saída:
+                              <input type="date" name="datasaida">
+                          </span>
+                          
+                          <span> Valor mensal:
+                              <input type="number" name="valormensal">
+                          </span>
+                          <br>
+                          <!-- <input type="submit" id="nome" value="Incluir aluguel"> -->
+                          
+
+
+                      </form> 
+                      <button onclick="CadastraImoveis()">Cadastrar aluguel</button>
+                      <p id="result"></p>
+                  </section>
+              </div>
+          </li>                
+          <li>
+            <input type="radio" name="tabs" class="rd_tabs" id="tab2">
+            <label for="tab2">Listar todos</label>
+            <div class="content" id="aba" >
+                <button onclick="ListarTodos()">Listar Todos</button>
+                <br>
+                <section>                    
+                <table id="tabela1"></table>
+                </section>
+            </div>
+        </li>
+        <li>
+            <input type="radio" name="tabs" class="rd_tabs" id="tab3">
+            <label for="tab3">Listar Especifico</label>
+            <div class="content" id="aba">                    
+                <span>Código do Imóvel : <input type="text" id="codigolistar"></span>
+                <button onclick="ListarEspecifico()">Listar Especifico</button>
+                <section>
+                <table id="tabela2"></table>
+                </section>                
+            </div>
+        </li>
+              </div>
+          </li>
+      </ul>
+      li>
+      <input type="radio" name="tabs" class="rd_tabs" id="tab4">
+      <label for="tab4">Alterar</label>
+      <div class="content" id="aba">
+          <span>Código do imóvel : 
+          <input type="text" id="codigoalterar">
+          <button onclick="pesquisar()">Pesquisar</button>
+          </span>
+          <table id="tabela3"></table>
+          <br>
+          <span>O que deseja alterar : 
+              <br><span><input id="3" type="checkbox" class="checkoption" onclick="checkedOnClick(this);"> Data de entrada/span><br>
+              <span><input id="4" type="checkbox" class="checkoption" onclick="checkedOnClick(this);"> CPF do Fiador</span><br>
+              <span><input id="5" type="checkbox" class="checkoption" onclick="checkedOnClick(this);"> Nome do fiador</span><br>
+              <span><input id="6" type="checkbox" class="checkoption" onclick="checkedOnClick(this);"> Data de saída</span><br>
+              <span><input id="7" type="checkbox" class="checkoption" onclick="checkedOnClick(this);"> Valor mensal</span><br>
+
+              <br><span>Novo dado : 
+              </span>
+          </span>
+          <p id="pdadonovo"><input type="text" id="novodado"></p>
+          <br>
+          <button onclick="ConfirmarAlterar()">Confirmar</button>
+      </div>
+  </li>
+          
+    </nav>
+  </section>
+  
+  <input type="radio" name="tabs" class="rd_tabs" id="tab4">
+  <label for="tab4">Alterar</label>
+  <div class="content" id="aba">
+      <span>Código do imóvel que deseja alterar : 
+      <input type="text">
+      <input type="submit" value="Pesquisar">
+      </span>
+      <table class="tabela1">
+        <span>O que deseja alterar : 
+            <input type="text">
+            <span>Novo dado : 
+            <input type="text">
+            </span>
+            <input type="submit" value="Alterar">
+        </span>
+        <li>
+            <input type="radio" name="tabs" class="rd_tabs" id="tab5">
+            <label for="tab5">Excluir</label>
+            <div class="content" id="aba">
+                <span>Código do imóvel que deseja excluir :
                     <input type="text">
                     <input type="submit" value="Pesquisar">
                     </span>
                     <table class="tabela1">
-                        <tr>
-                            <th>CPF do cliente</th>
-                            <th>Código do imóvel</th>
-                            <th>Data de entrada</th>
-                            <th>CPF do fiador</th>
-                            <th>Nome do fiador</th>
-                            <th>Data de saída</th>
-                            <th>Valor mensal</th>
-                        </tr>
-                        <tr>
-                            <td>431.294.177-60</td>
-                            <td>3a5j</td>
-                            <td>06/01/21</td>
-                            <td>386.824.721-40</td>
-                            <td>Evandro Garcia</td>
-                            <td>19/01/22</td>
-                            <td>R$1800,00</td>
-                        </tr>
-                    </table>                
+                    </table>
                     <br>
-                    <span>O que deseja alterar : 
-                        <input type="text">
-                        <span>Novo dado : 
-                        <input type="text">
-                        </span>
-                        <input type="submit" value="Alterar">
-                    </span>
-                </div>
-            </li>
-            <li>
-                <input type="radio" name="tabs" class="rd_tabs" id="tab5">
-                <label for="tab5">Excluir</label>
-                <div class="content" id="aba">
-                    <span>Código do imóvel que deseja excluir :
-                        <input type="text">
-                        <input type="submit" value="Pesquisar">
-                        </span>
-                        <table class="tabela1">
-                            <tr>
-                                <th>CPF do cliente</th>
-                                <th>Código do imóvel</th>
-                                <th>Data de entrada</th>
-                                <th>CPF do fiador</th>
-                                <th>Nome do fiador</th>
-                                <th>Data de saída</th>
-                                <th>Valor mensal</th>
-                            </tr>
-                            <tr>
-                                <td>431.294.177-60</td>
-                                <td>3a5j</td>
-                                <td>06/01/21</td>
-                                <td>386.824.721-40</td>
-                                <td>Evandro Garcia</td>
-                                <td>19/01/22</td>
-                                <td>R$1800,00</td>
-                            </tr>
-                        </table>
-                        <br>
-                        <span>Tem certeza que deseja excluir o aluguel ?
-                            <input type="submit" value="excluir">
-                            <input type="submit" value="cancelar">
-                        </span>
-                </div>
-            </li>
-        </ul>
+                <span>Tem certeza que deseja excluir o aluguel ?
+                <input type="submit" value="excluir">
+                <input type="submit" value="cancelar">
+                </span>
+            </div>
+        </li>
 
-    </nav>
-    </section>
+    
+
+
+
     <footer>Deividi Filho 3029948<br>
         Gabriel Rufino 3029841
     </footer>
