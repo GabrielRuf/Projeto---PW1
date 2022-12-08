@@ -204,6 +204,9 @@ function ConfirmarAlterar() // Função responsável por confirmar e alterar de 
             clientes[ClienteAlterando].telefone = novodado;
         }
         alert("Cliente alterado com sucesso !");
+        let stringClientes = JSON.stringify(clientes);
+        localStorage.setItem("Vetor clientes",stringClientes);
+        
     }
     else
     {

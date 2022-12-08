@@ -1,6 +1,10 @@
 let imoveis = []
 let i = 0
-
+function AtualizaVetor()
+{
+    let vetoremstring = localStorage.getItem("Vetor imoveis");
+    clientes = JSON.parse(vetoremstring);
+}
 function CadastraImoveis() {
   event.preventDefault()
 
@@ -27,9 +31,11 @@ function CadastraImoveis() {
 
   if (Cadastro == -1) {
     imoveis.push(imovel)
-    alert('Imóvel cadastrado !')
+    alert('Imóvel cadastrado !');
+    let stringImoveis = JSON.stringify(imoveis);
+    localStorage.setItem("Vetor imoveis",stringImoveis);
   } else {
-    alert('Imóvel já cadastrado !')
+    alert('Imóvel já cadastrado !');
   }
 }
 function ListarTodos() {
@@ -349,7 +355,7 @@ function checkedOnClick(el) {
 function ConfirmarAlterar() {
   let novodado = document.getElementById("novodado").value;
   if (possivelAlterar == true) {
-    alert('Imóvel alterado com sucesso !');
+    
     if (DadoparaAlterar == '2') {
       imoveis[ImoveisAlterando].description = novodado;
     }
@@ -395,6 +401,9 @@ function ConfirmarAlterar() {
     if (DadoparaAlterar == '16') {
       imoveis[ImoveisAlterando].condominio = novodado;
     }
+    alert('Imóvel alterado com sucesso !');
+    let stringImoveis = JSON.stringify(imoveis);
+    localStorage.setItem("Vetor imoveis",stringImoveis);
   } else {
     alert('Não foi possível alterar o imóvel !')
   }
@@ -472,6 +481,8 @@ function confirmarexc() {
   let imoveisnovo = imoveis.filter(excluir)
   imoveis = imoveisnovo
   alert('Imóvel excluido com sucesso !')
+  let stringImoveis = JSON.stringify(imoveis);
+  localStorage.setItem("Vetor imoveis",stringImoveis);
 }
 
 function excluir(elemento) {
